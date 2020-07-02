@@ -12,17 +12,20 @@ namespace Examen_Francisca_Binder
         static void Main(string[] args)
         {
             List<Team> teams = new List<Team>();
+            
+            /*Solo por si se quiere usar el evento
             Match match = new Match();
             Player player = new Player();
-            player.Injure += match.OnInjure;
+            player.Injure += match.OnInjure;*/
 
             string switcher = "0";
             string stopper = "3";
 
             while (switcher != stopper)
             {
+                Console.Clear();
                 Console.WriteLine("Bienvenido a Fifa! \nPorfavor seleccione lo que desee hacer");
-                Console.WriteLine("Si desea:\n\t(1)Crear equipo\n\t(2)Salir del programa\n");
+                Console.WriteLine("Si desea:\n\t(1)Crear equipo\n\t(2)Ver la información de los equipos\n\t(3)Salir del programa\n");
                 switcher = Console.ReadLine();
                 Console.Clear();
                 switch (switcher)
@@ -177,7 +180,6 @@ namespace Examen_Francisca_Binder
                         Doctor doctor = new Doctor(dpoints, dname, dlastName, dage, dnation, dsalary);
 
                         Team team = new Team(team_name, team_type, players, coach, doctor);
-                        teams.Add(team);
 
                         Console.Clear();
                         Console.WriteLine("Ahora continuamos con los jugadores");
@@ -324,6 +326,7 @@ namespace Examen_Francisca_Binder
                             string ans = Console.ReadLine();
                             if (ans != "1")
                             {
+                                teams.Add(team);
                                 count_p = 1;
                                 Console.Clear();
                             }
@@ -332,6 +335,20 @@ namespace Examen_Francisca_Binder
                         }
                         break;
                     case "2":
+                        foreach (Team t in teams)
+                        {
+                            Console.Clear();
+                            Console.WriteLine(t.GetTeamInformation());
+                            Console.WriteLine("¿Desea ver la información de los jugadores del equipo?\n\t(1)Sí\n\t(Otro)No");
+                            string ans2 = Console.ReadLine();
+                            if (ans2 == "1")
+                            {
+                                t.GetPlayersInformation();
+                            }
+
+                        }
+                        break;
+                    case "3":
                         switcher = "3";
                         break;
                     default:

@@ -58,7 +58,7 @@ namespace Examen_Francisca_Binder
             }
             
         }
-        public string GetInformation (Team currentTeam)
+        public string GetTeamInformation ()
         {
             string tt;
             if (type == false)
@@ -69,7 +69,14 @@ namespace Examen_Francisca_Binder
             {
                 tt = "Nacional";
             }
-            return $"Team name: {name}\nTeam type: {tt}\nTeam coach: {coach.Name} {coach.Lastname}\nTeam doctor: {doctor.Name} {doctor.Lastname}";
+            return $"Team name: {this.name}\n\t\tTipo de equipo: {tt}\n\t\tCoach: {this.coach.Name} {this.coach.Lastname}\n\t\tDoctor: {this.doctor.Name} {this.doctor.Lastname}";
+        }
+        public void GetPlayersInformation()
+        {
+            foreach (Player p in this.players)
+            {
+                Console.WriteLine($"\n\t\t{p.Shirt_number}: {p.Name} {p.Lastname}");
+            }
         }
 
         public void AddPlayer(Player player)
