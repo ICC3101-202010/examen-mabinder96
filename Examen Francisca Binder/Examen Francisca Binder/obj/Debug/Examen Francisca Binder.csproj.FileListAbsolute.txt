@@ -1,0 +1,7 @@
+C:\Users\kikil\Documents\Universidad\2020-1\Programación orientada a objetos\Examen\examen-mabinder96\Examen Francisca Binder\Examen Francisca Binder\bin\Debug\Examen Francisca Binder.exe.config
+C:\Users\kikil\Documents\Universidad\2020-1\Programación orientada a objetos\Examen\examen-mabinder96\Examen Francisca Binder\Examen Francisca Binder\bin\Debug\Examen Francisca Binder.exe
+C:\Users\kikil\Documents\Universidad\2020-1\Programación orientada a objetos\Examen\examen-mabinder96\Examen Francisca Binder\Examen Francisca Binder\bin\Debug\Examen Francisca Binder.pdb
+C:\Users\kikil\Documents\Universidad\2020-1\Programación orientada a objetos\Examen\examen-mabinder96\Examen Francisca Binder\Examen Francisca Binder\obj\Debug\Examen Francisca Binder.csprojAssemblyReference.cache
+C:\Users\kikil\Documents\Universidad\2020-1\Programación orientada a objetos\Examen\examen-mabinder96\Examen Francisca Binder\Examen Francisca Binder\obj\Debug\Examen Francisca Binder.csproj.CoreCompileInputs.cache
+C:\Users\kikil\Documents\Universidad\2020-1\Programación orientada a objetos\Examen\examen-mabinder96\Examen Francisca Binder\Examen Francisca Binder\obj\Debug\Examen Francisca Binder.exe
+C:\Users\kikil\Documents\Universidad\2020-1\Programación orientada a objetos\Examen\examen-mabinder96\Examen Francisca Binder\Examen Francisca Binder\obj\Debug\Examen Francisca Binder.pdb
