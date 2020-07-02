@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen_Francisca_Binder
 {
-    public class Player:Person
+    public class Player:Person,IPlay
     {
         private int attack_points;
         private int defense_points;
@@ -51,6 +51,16 @@ namespace Examen_Francisca_Binder
         public void InjureStarter(Coach mycoach, Team myTeam)
         {
             OnInjure(this, mycoach, myTeam);
+        }
+
+        public void Attack(int points)
+        {
+            this.attack_points -= points;
+        }
+
+        public void Defense(int points)
+        {
+            this.defense_points-= points;
         }
     }
 }

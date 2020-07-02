@@ -58,7 +58,7 @@ namespace Examen_Francisca_Binder
             }
             
         }
-        public string GetTeamInformation ()
+        public string GetTeamInformation()
         {
             string tt;
             if (type == false)

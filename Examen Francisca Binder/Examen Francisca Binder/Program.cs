@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Data;
 
 namespace Examen_Francisca_Binder
 {
@@ -35,19 +36,62 @@ namespace Examen_Francisca_Binder
                         Console.WriteLine("Ingrese: \n\t(1)Equipo es de la selección nacional\n\t(Otro)Equipo de la liga");
                         string optionteamtype = Console.ReadLine();
                         bool team_type;
-                        string team_name;
+                        string team_name="";
                         List<Player> players = new List<Player>();
                         if (optionteamtype == "1")
                         {
                             team_type = true;
                             Console.WriteLine("Ingrese la nación de su equipo: ");
-                            team_name = Console.ReadLine();
+                            int cn = 0;
+                            while (cn == 0)
+                            {
+                                int cnn = 0;
+                                team_name = Console.ReadLine();
+                                foreach (Team t in teams)
+                                {
+                                    if (t.Name == team_name)
+                                    {
+                                        cnn++;
+                                    }
+                                }
+                                if (cnn != 0)
+                                {
+                                    Console.WriteLine("Esa nación ya existe. Por favor seleccione otra.");
+                                }
+                                else
+                                {
+                                    cn = 1;
+                                }
+
+                            }
                         }
                         else
                         {
                             team_type = false;
                             Console.WriteLine("Ingrese el nombre de su equipo: ");
-                            team_name = Console.ReadLine();
+                            int cn = 0;
+                            while (cn == 0)
+                            {
+                                int cnn = 0;
+                                team_name = Console.ReadLine();
+                                foreach(Team t in teams)
+                                {
+                                    if (t.Name == team_name)
+                                    {
+                                        cnn++;
+                                    }
+                                }
+                                if (cnn != 0)
+                                {
+                                    Console.WriteLine("Ese nombre ya existe. Por favor seleccione otro.");
+                                }
+                                else
+                                {
+                                    cn = 1;
+                                }
+
+                            }
+                            
                         }
                         Console.Clear();
                         Console.WriteLine("Ahora ingrese los datos del DT");
@@ -335,18 +379,31 @@ namespace Examen_Francisca_Binder
                         }
                         break;
                     case "2":
-                        foreach (Team t in teams)
+                        if (teams.Count() == 0)
                         {
-                            Console.Clear();
-                            Console.WriteLine(t.GetTeamInformation());
-                            Console.WriteLine("¿Desea ver la información de los jugadores del equipo?\n\t(1)Sí\n\t(Otro)No");
-                            string ans2 = Console.ReadLine();
-                            if (ans2 == "1")
-                            {
-                                t.GetPlayersInformation();
-                            }
+                            Console.WriteLine("No se han creado equipos.");
+                            Console.ReadKey();
 
                         }
+                        else
+                        {
+                            foreach (Team t in teams)
+                            {
+                                Console.Clear();
+                                Console.WriteLine(t.GetTeamInformation());
+                                Console.WriteLine("¿Desea ver la información de los jugadores del equipo?\n\t(1)Sí\n\t(Otro)No");
+                                string ans2 = Console.ReadLine();
+                                if (ans2 == "1")
+                                {
+                                    t.GetPlayersInformation();
+                                    Console.ReadKey();
+
+
+                                }
+
+                            }
+                        }
+                        
                         break;
                     case "3":
                         switcher = "3";

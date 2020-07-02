@@ -46,6 +46,7 @@
     <Compile Include="Coach.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="InjureEventsArgs.cs" />
+    <Compile Include="IPlay.cs" />
     <Compile Include="Match.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Player.cs" />
